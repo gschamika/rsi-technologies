@@ -73,12 +73,8 @@ section h1 {
 }
 
 /* style for projects section */
-
-
-
 .project-section
  {
-    
     background: url('images/project/project_section_bg.png') no-repeat center center; 
     background-size: 100vw 100vh; /* Ensure the background image covers the entire screen */
     background-repeat: no-repeat;
