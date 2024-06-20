@@ -11,12 +11,30 @@ body {
 }
 
 nav {
-    background-color: #c5c0c0;
+    background-color: #ffffff;
     overflow: hidden;
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1000;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    background-color: #f8f9fa; 
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+
+.logo-container {
+    flex: 0 0 auto; 
+    margin-right: 20px; 
+}
+
+.nav-logo {
+    width: 100px; 
+    height: auto;
 }
 
 nav ul {
@@ -25,41 +43,90 @@ nav ul {
     padding: 0;
     display: flex;
     flex-wrap: wrap;
+    flex: 1; 
+    justify-content: flex-end; 
 }
 
 nav ul li {
-    flex: 1;
+    margin-left: 20px; 
+    margin-right: 20px;
 }
 
 nav ul li a {
     display: block;
-    color: rgb(0, 0, 0);
+    color: #000;
     text-align: center;
-    padding: 14px 16px;
+    padding: 10px 15px;
     text-decoration: none;
+    font-family: 'Montserrat', sans-serif; 
+    font-weight: bold; 
+    transition: background-color 0.3s, color 0.3s;
 }
 
 nav ul li a:hover {
     background-color: #0E3262;
-    color: #fff;
+    color: #fff; 
+    border-radius: 5px; 
 }
 
 section {
     padding: 20px;
-    margin-top: 50px;
+    margin-top: 60px;
 }
 
 section h1 {
     margin-top: 0;
 }
 
+/* style for home section */
 #home {
-    background-color: #ffffff;
+    background: url('images/home/Home.png') no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 90vh;
+    color: #fff;
+    position: relative;
+    padding: 20px;
 }
 
 .logo {
-    width: 50px;
-    height: 50px;
+    max-width: 523px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+    margin-right: 10px;
+}
+
+.text-content h1 {
+    font-size: 3em;
+    font-family: 'Montserrat';
+    color: #0E3262;
+    text-align: left;
+    margin: 0;
+}
+
+.btn {
+    background-color: #0E3262;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 80px;
+    font-size: 10px;
+    font-family: 'Helios Antique';
+    font-weight: bold;
+    display: inline-block;
+}
+
+.rsi-footer {
+    padding: 10px 0;
+    text-align: right;
+}
+
+.rsi-footer p {
+    font-size: 1em;
+    font-family: 'Montserrat';
+    color: #ffffff;
 }
 
 /* style for about section */
@@ -254,8 +321,8 @@ section h1 {
     margin: 0;
 }
 
-/* style for about-us section */
-#about-us {
+/* style for contact-us section */
+#contact-us {
     padding: 50px;
     background-color: #0E3262;
     color: #fff;
@@ -335,6 +402,54 @@ footer p {
 }
 
 /* Media queries for responsiveness */
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media (min-width: 600px) {
+    .text-content h1 {
+        margin-top: 60px;
+        font-size: 3.5em;
+    }
+    .btn {
+        font-size: 0.8em;
+        margin-top: 150px;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media (min-width: 768px) {
+    .text-content h1 {
+        margin-top: 60px;
+        font-size: 3.5em;
+    }
+    .btn {
+        font-size: 0.8em;
+        margin-top: 150px;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media (min-width: 992px) {
+    .text-content h1 {
+        margin-top: 60px;
+        font-size: 3.5em;
+    }
+    .btn {
+        font-size: 0.8em;
+        margin-top: 150px;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .text-content h1 {
+        margin-top: 60px;
+        font-size: 3.5em;
+    }
+    .btn {
+        font-size: 0.8em;
+        margin-top: 150px;
+    }
+}
 
 @media screen and (max-width: 1200px) {
     .team-container {
