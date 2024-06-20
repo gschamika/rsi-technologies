@@ -9,20 +9,22 @@ body {
 nav {
     background-color: #ffffff;
     overflow: hidden;
-    position: fixed;  /* Add this line to fix the nav bar */
-    top: 0;  /* Add this line to position it at the top */
-    width: 100%;  /* Ensure it spans the full width of the page */
-    z-index: 1000;  /* Ensure it stays above other content */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
 }
 
 nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 nav ul li {
-    float: left;
+    flex: 1;
 }
 
 nav ul li a {
@@ -51,7 +53,7 @@ section h1 {
     background-color: #ffffff;
 }
 
-.logo{
+.logo {
     width: 50px;
     height: 50px;
 }
@@ -79,8 +81,7 @@ section h1 {
 /* style for our-team section */
 #our-team {
     background-color: #ffffff;
-    padding: 50px 0;
-    background-color: #fff;
+    padding: 5px 0;
 }
 
 .team-header {
@@ -90,13 +91,13 @@ section h1 {
 }
 
 .team-header h1 {
-    font-size: 36px;
+    font-size: 2.25em;
     font-weight: bold;
     font-family: 'Montserrat';
 }
 
 #our-team h1 {
-    font-size: 36px;
+    font-size: 2.25em;
     font-family: 'Montserrat';
     margin-top: 50px;
     margin-bottom: 20px;
@@ -108,13 +109,15 @@ section h1 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     justify-items: center;
+    gap: 20px;
 }
 
 .team-member {
     display: flex;
     background-color: #fff;
     overflow: hidden;
-    width: 400px;
+    width: 100%;
+    max-width: 400px;
     height: 150px;
     padding: 10px;
 }
@@ -131,7 +134,7 @@ section h1 {
 }
 
 .team-member h2 {
-    font-size: 14px;
+    font-size: 0.875em;
     font-weight: bold;
     color: #0E3262;
     margin-bottom: 5px;
@@ -139,7 +142,7 @@ section h1 {
 }
 
 .team-member p {
-    font-size: 12px;
+    font-size: 0.75em;
     font-style: italic;
     color: #0E3262;
     margin: 0;
@@ -147,74 +150,117 @@ section h1 {
 
 /* style for about-us section */
 #about-us {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
+    padding: 50px;
     background-color: #0E3262;
     color: #fff;
-    max-height: 768px;
 }
 
 .container {
     display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
 }
 
 .content {
-    flex: 1;
-    padding: 20px;
-    margin-left: 61px;
+    max-width: 60%;
+    margin: 0 auto;
 }
 
 .content h1 {
-    font-size: 36px;
+    font-size: 2.25em;
+    margin-bottom: 20px;
     font-family: 'Montserrat';
 }
 
 .content p {
-    font-size: 16px;
+    font-size: 1em;
+    line-height: 1.6;
     text-align: justify;
-    line-height: 1.4;
-    margin-bottom: 20px;
 }
 
-.content button {
-    background-color: #fff;
-    color: #102E55;
+button {
+    background-color: white;
+    color: #0e2a47;
     border: none;
-    padding: 10px 20px;
-    font-size: 1em;
+    padding: 15px 30px;
+    font-size: 0.875em;
     font-family: 'Helios Antique';
     cursor: pointer;
-    border-radius: 20px;
+    border-radius: 25px;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #ddd;
 }
 
 .contact-info {
-    flex: 1;
-    padding: 20px;
+    max-width: 30%;
+    margin: 0 auto;
     text-align: left;
 }
 
 .contact-info p {
-    margin-bottom: 20px;
-}
-
-.contact-info .social {
-    display: flex;
-    gap: 10px;
-}
-
-.contact-info .social a img {
-    width: 24px;
-    height: 24px;
-}
-
-footer {
-    margin-top: 20px;
-}
-
-footer p {
-    font-size: 16px;
+    font-size: 1.125em;
+    line-height: 1.8;
     font-family: 'Helios Antique';
 }
 
+.contact-info a {
+    margin-right: 10px;
+}
+
+.contact-info img {
+    width: 30px;
+    height: 30px;
+}
+
+footer {
+    margin-top: 50px;
+    border-top: 3px solid white;
+    padding-top: 10px;
+}
+
+footer p {
+    font-size: 1em;
+    font-family: 'Helios Antique';
+    text-align: center;
+}
+
+/* Media queries for responsiveness */
+
+@media screen and (max-width: 1200px) {
+    .team-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .team-container {
+        grid-template-columns: 1fr;
+    }
+    .content {
+        max-width: 100%;
+    }
+    .contact-info {
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav ul li {
+        flex: none;
+    }
+    .logo {
+        width: 40px;
+        height: 40px;
+    }
+    button {
+        width: 100%;
+    }
+}
