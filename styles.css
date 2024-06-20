@@ -72,86 +72,8 @@ section h1 {
     background-color: #ffffff;
 }
 
-/* style for projects section */
-.we-done
-{
-    position: relative;
-    background-color: #0E3262;
-    height: 100vh; /* Adjust as needed */
-    overflow: hidden;
-    color: white;
-    margin: 0;
-    padding: 20px;
-    justify-content: center
-
-}
-.we-done::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('images/project/weDone.png'); /* Replace with your image URL */
-    background-size: cover;
-    background-position: center;
-    opacity: 0.8; /* Adjust opacity as needed */
-    z-index: 1;
-}
-
-.we-done h1{
-    padding: 40px 20px;
-    text-align: left;
-    color: #ffffff;       /* Headding colour*/
-    font-family: montserrat;
-    font-size: 36px;
-
-}
-
-.we-done-container {
-    display: flex;
-    justify-content: center; /* Center the columns */
-    gap: 10px; /* Reduced gap to bring columns closer */
-    width: 100%;
-    
-}
-
-.we-done-column {
-    padding: 10px; /* Reduced padding */
-    flex: 1 1 calc(33.333% - 10px); /* Adjusted to fit three columns with reduced gap */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-   
-}
-
-.we-done-column img {
-    max-width: 50%;
-    height: auto;
-    margin-bottom: 0; /* Reduced margin-bottom for images */
-}
-
-.we-done-content {
-    text-align: center;
-    padding: 10px; /* Reduced padding */
-}
-
-.we-done-content h1 {
-    color: #ffffff; /* Heading color */
-    font-family: Montserrat, sans-serif;
-    font-size: 67.2px; /* Reduced font size */
-    margin-bottom: 0%; /* Reduced margin-bottom for headings */
-}
-
-.we-done-content p {
-    color: #ffffff; /* Paragraph color */
-    font-family: Montserrat, sans-serif;
-    font-size: 22px; /* Reduced font size */
-    margin-bottom: 0%; /* Removed margin-bottom for paragraphs */
-}
-
-.project-section
- {
+/* style for project-section*/
+.project-section{
     
     background: url('images/project/project_section_bg.png') no-repeat center center; 
     background-size: 100vw 100vh; /* Ensure the background image covers the entire screen */
