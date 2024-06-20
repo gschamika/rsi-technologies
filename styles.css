@@ -67,8 +67,27 @@ section h1 {
 }
 
 /* style for projects section */
-#projects {
-    background-color: #ffffff;
+
+
+
+.project-section
+ {
+    
+    background: url('images/project/project_section_bg.png') no-repeat center center; 
+    background-size: 100vw 100vh; /* Ensure the background image covers the entire screen */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;  /* Ensures the image covers the section */
+    padding: 50px 70px;
+    text-align: left;
+    color: #0E3262;       /* Headding colour*/
+    font-family: montserrat;
+}
+
+.project-section p{
+    font-size: 17px;
+    text-align: justify;
+    margin-bottom: 40px;
 }
 
 /* style for products section */
