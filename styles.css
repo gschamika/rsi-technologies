@@ -150,63 +150,6 @@ section h1 {
     margin-bottom: 0%; /* Removed margin-bottom for paragraphs */
 }
 
-      /* Responsive media queries */
-      @media screen and (max-width: 1200px) {
-        .we-done-container {
-            padding: 10px; /* Adjusted padding for smaller screens */
-        }
-
-        .we-done h1 {
-            font-size: 32px; /* Adjusted font size for smaller screens */
-        }
-
-        .we-done-column {
-            flex: 1 1 calc(50% - 20px); /* Two columns per row on medium screens */
-        }
-    }
-
-    @media screen and (max-width: 768px) {
-        .we-done-container {
-            gap: 10px; /* Further reduced gap between columns on smaller screens */
-        }
-
-        .we-done h1 {
-            font-size: 28px; /* Further reduced font size for smaller screens */
-        }
-
-        .we-done-column {
-            flex: 1 1 100%; /* Single column per row on small screens */
-        }
-    }
-
-    @media screen and (max-width: 480px) {
-        .we-done h1 {
-            font-size: 20px; /* Further reduced font size for very small screens */
-            padding: 20px 10px; /* Adjusted padding for smaller screens */
-        }
-
-        .we-done-container {
-            gap: 10px; /* Further reduced gap between columns on very small screens */
-        }
-
-        .we-done-column {
-            flex: 1 1 100%; /* Single column per row on very small screens */
-            padding: 10px; /* Adjusted padding for smaller screens */
-        }
-
-        .we-done-column img {
-            max-width: 80%; /* Adjusted max-width for images on smaller screens */
-        }
-
-        .we-done-content h1 {
-            font-size: 18px; /* Adjusted font size for headings on very small screens */
-        }
-
-        .we-done-content p {
-            font-size: 14px; /* Adjusted font size for paragraphs on very small screens */
-        }
-    }
-
 .project-section
  {
     
