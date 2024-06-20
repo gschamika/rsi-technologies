@@ -72,22 +72,111 @@ section h1 {
     background-color: #ffffff;
 }
 
+/* style for projects section */
+#projects{
+    background-color: #ffffff;
+    padding: 5px 0;
+}
+
 .project-section{
     background: url('images/project/project_section_bg.png') no-repeat center center; 
     background-size: 100vw 100vh; /* Ensure the background image covers the entire screen */
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;  /* Ensures the image covers the section */
-    padding: 50px 70px;
+    padding: 50px;
     text-align: left;
-    color: #0E3262;       /* Headding colour*/
-    font-family: montserrat;
+    font-family: 'montserrat';
+}
+
+.project-section h1{
+    font-size: 2.25em;
+    color: #0E3262;
+}
+
+.project-section h3{
+    font-size: 1.75em;
+    color: #0E3262;
 }
 
 .project-section p{
     font-size: 17px;
+    color: #545454;
     text-align: justify;
     margin-bottom: 40px;
+}
+
+.we-done
+{
+    position: relative;
+    background-color: #0E3262;
+    height: 100vh;
+    overflow: hidden;
+    color: white;
+    margin: 0;
+    padding: 50px;
+    justify-content: center
+
+}
+
+.we-done::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/project/weDone.png'); /* Replace with your image URL */
+    background-size: cover;
+    background-position: center;
+    opacity: 0.8; /* Adjust opacity as needed */
+    z-index: 1;
+}
+
+.we-done h1{
+    padding: 40px 20px;
+    text-align: left;
+    color: #ffffff;       /* Headding colour*/
+    font-family: 'montserrat';
+    font-size: 2.25em;
+}
+
+.we-done-container {
+    display: flex;
+    justify-content: center; /* Center the columns */
+    gap: 10px; /* Reduced gap to bring columns closer */
+    width: 100%;
+}
+
+.we-done-column {
+    padding: 10px;
+    flex: 1 1 calc(33.333% - 10px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.we-done-column img {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 0; 
+}
+
+.we-done-content {
+    text-align: center;
+    padding: 10px; 
+}
+
+.we-done-content h1 {
+    font-family: 'Montserrat';
+    font-size: 4.2em; 
+    margin-bottom: 0%; 
+}
+
+.we-done-content p {
+    font-family: 'Montserrat';
+    font-size: 1.375em; 
+    margin-bottom: 0%; 
 }
 
 /* style for products section */
@@ -279,5 +368,88 @@ footer p {
     }
     button {
         width: 100%;
+    }
+}
+
+/* For tablets and below */
+@media (max-width: 992px) {
+    .we-done h1 {
+        font-size: 2em;
+        padding: 30px 15px;
+    }
+    
+    .we-done-container {
+        gap: 10px;
+    }
+
+    .we-done-column {
+        flex: 1 1 calc(50% - 20px); /* Two columns on medium screens */
+    }
+
+    .we-done-content h1 {
+        font-size: 3.5em;
+    }
+
+    .we-done-content p {
+        font-size: 1.2em;
+    }
+}
+
+/* For small screens and mobile devices */
+@media (max-width: 768px) {
+    .we-done h1 {
+        font-size: 1.75em;
+        padding: 20px 10px;
+    }
+
+    .we-done-container {
+        gap: 5px;
+    }
+
+    .we-done-column {
+        flex: 1 1 100%; /* Single column on small screens */
+        padding: 10px 0;
+    }
+
+    .we-done-column img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .we-done-content h1 {
+        font-size: 3em;
+    }
+
+    .we-done-content p {
+        font-size: 1.1em;
+    }
+}
+
+/* For extra small screens and mobile devices */
+@media (max-width: 576px) {
+    .we-done {
+        padding: 10px 20px;
+    }
+
+    .we-done h1 {
+        font-size: 1.5em;
+        padding: 15px 10px;
+    }
+
+    .we-done-container {
+        gap: 5px;
+    }
+
+    .we-done-column img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .we-done-content h1 {
+        font-size: 2.5em;
+    }
+
+    .we-done-content p {
+        font-size: 1em;
     }
 }
