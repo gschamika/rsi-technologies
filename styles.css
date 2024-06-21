@@ -80,54 +80,102 @@ section h1 {
 
 /* style for home section */
 #home {
-    background: url('images/home/Home.png') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: url('images/home/home.png') no-repeat center center/cover;
+    height: 85vh;
+    position: relative;
+}
+
+.container1 {
+    position: relative;
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    height: 90vh;
-    color: #fff;
-    position: relative;
-    padding: 20px;
+    justify-content: center;
 }
 
-.logo {
-    max-width: 523px;
+.logo1 {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 523px;
     height: auto;
-    margin: 0 auto;
-    display: block;
-    margin-right: 10px;
 }
 
-.text-content h1 {
+.content1 {
+    max-width: 80%;
+}
+
+.content1 h1 {
+    margin-left: 20px;
     font-size: 3em;
-    font-family: 'Montserrat';
-    color: #0E3262;
     text-align: left;
-    margin: 0;
+    color: #0E3262;
+    font-family: 'montserrat';
 }
 
-.btn {
-    background-color: #0E3262;
-    color: #fff;
+.learn-more {
+    position: absolute;
+    bottom: 90px;
+    left: 20px;
     padding: 10px 20px;
+    background-color: #003366;
+    color: #fff;
     text-decoration: none;
-    border-radius: 80px;
-    font-size: 10px;
-    font-family: 'Helios Antique';
+    border-radius: 100px;
     font-weight: bold;
-    display: inline-block;
+    font-family: 'Helios Antique';
 }
 
-.rsi-footer {
-    padding: 10px 0;
-    text-align: right;
-}
-
-.rsi-footer p {
-    font-size: 1em;
-    font-family: 'Montserrat';
+.f1 {
+    position: absolute;
+    bottom: 15px;
+    right: 20px;
     color: #ffffff;
+    font-weight: bold;
+    font-family: 'montserrat';
+    letter-spacing: 0.3em;
 }
+
+@media (max-width: 768px) {
+    .logo1 {
+        width: 400px;
+    }
+    
+    .content1 h1 {
+        font-size: 3em;
+    }
+
+    .learn-more {
+        padding: 8px 16px;
+        font-size: 0.9em;
+    }
+
+    .f1 p {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) {
+    .content1 h1 {
+        margin-top: 150px;
+        font-size: 2.5em;
+    }
+
+    .learn-more {
+        padding: 6px 12px;
+        font-size: 0.8em;
+    }
+
+    .f1 p {
+        font-size: 0.8em;
+    }
+}
+
 
 /* style for about section */
 #about {
@@ -402,54 +450,6 @@ footer p {
 }
 
 /* Media queries for responsiveness */
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media (min-width: 600px) {
-    .text-content h1 {
-        margin-top: 60px;
-        font-size: 3.5em;
-    }
-    .btn {
-        font-size: 0.8em;
-        margin-top: 150px;
-    }
-}
-
-/* Medium devices (landscape tablets, 768px and up) */
-@media (min-width: 768px) {
-    .text-content h1 {
-        margin-top: 60px;
-        font-size: 3.5em;
-    }
-    .btn {
-        font-size: 0.8em;
-        margin-top: 150px;
-    }
-}
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media (min-width: 992px) {
-    .text-content h1 {
-        margin-top: 60px;
-        font-size: 3.5em;
-    }
-    .btn {
-        font-size: 0.8em;
-        margin-top: 150px;
-    }
-}
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media (min-width: 1200px) {
-    .text-content h1 {
-        margin-top: 60px;
-        font-size: 3.5em;
-    }
-    .btn {
-        font-size: 0.8em;
-        margin-top: 150px;
-    }
-}
 
 @media screen and (max-width: 1200px) {
     .team-container {
