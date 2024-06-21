@@ -185,7 +185,105 @@ section h1 {
 /* style for services section */
 #services {
     background-color: #ffffff;
+    padding: 5px 0;
+    font-family: 'montserrat';
 }
+
+.container2 {
+    background-color: #fbf8f8;
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.container3 {
+    background-color: #ffffff;
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.container2 h1 {
+    text-align: left;
+    font-weight: bolder;
+    font-size: 2.25em;
+    color: #0E3262;
+}
+
+.container2 h2 {
+    margin-top: 40px;
+    text-align: left;
+    margin-left: 50px;
+    font-size: 2.25em;
+    color: #0E3262;
+}
+
+.container3 h2 {
+    margin-top: 40px;
+    text-align: left;
+    margin-left: 50px;
+    font-size: 2.25em;
+    color: #0E3262;
+}
+
+.service-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.service {
+    width: calc(25% - 40px);
+    box-sizing: border-box;
+    transition: transform 0.3s ease;
+}
+
+.service img {
+    max-width: auto;
+    height: 205px;
+    margin-bottom: 20px;
+}
+
+.service h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #003366;
+    text-align: center;
+}
+
+.service p {
+    font-size: 1em;
+    color: #333;
+    line-height: 1.5em;
+    text-align: center;
+}
+
+@media (max-width: 1024px) {
+    .service {
+        width: calc(50% - 40px);
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2em;
+        margin-bottom: 20px;
+    }
+    
+    .service {
+        width: calc(50% - 20px);
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .service {
+        width: 100%;
+    }
+}
+
+
 
 /* style for projects section */
 #projects{
