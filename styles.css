@@ -297,14 +297,17 @@ section h1 {
 /* style for products section */
 #products {
     background-color: #ffffff;  
+    padding: 5px 0;
 }
 
 #products h1 {
     text-align: left;
-    font-size: 36px;
+    font-size: 2.25em;
     font-family: 'Montserrat', sans-serif;
     color: #545454;
-    margin-bottom: 0px; /* Adjust this value as needed to reduce space below the h1 */
+    margin-bottom: 0px; 
+    margin-left: 40px;
+    font-weight: bolder;
 }
 
 .product-upper {
@@ -572,6 +575,7 @@ section h1 {
 #our-team {
     background-color: #ffffff;
     padding: 5px 0;
+    margin-top: -10px;
 }
 
 .team-header {
