@@ -430,6 +430,12 @@ button:hover {
 
 .contact-info a {
     margin-right: 10px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    color: #00ff0d;
 }
 
 .contact-info img {
