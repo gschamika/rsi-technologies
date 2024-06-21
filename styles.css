@@ -308,7 +308,7 @@ section h1 {
 
 .shape {
     display: flex;
-    align-items: center;
+    align-items:left;
     background-color: rgba(255, 255, 255, 0.8);
     padding: 10px;
     border-radius: 40px;
@@ -316,7 +316,7 @@ section h1 {
     width: 60%;
 }
 
-.shape img {
+.shape img  {
     width: 80px;
     height: auto;
     margin-right: 5px;  
@@ -332,6 +332,8 @@ section h1 {
     font-weight: bold;
     margin-bottom: 5px;
 }
+
+
 
 .right-column {
     flex: 1;
