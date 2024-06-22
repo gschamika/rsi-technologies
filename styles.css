@@ -190,6 +190,7 @@ section h1 {
 }
 
 .container2 {
+    animation: panRight 1s ease-in-out;
     background-color: #fbf8f8;
     max-width: 100%;
     margin: 0 auto;
@@ -197,6 +198,7 @@ section h1 {
 }
 
 .container3 {
+    animation: panRight 0.5s ease-in-out;
     background-color: #ffffff;
     max-width: 100%;
     margin: 0 auto;
@@ -282,8 +284,6 @@ section h1 {
         width: 100%;
     }
 }
-
-
 
 /* style for projects section */
 #projects{
@@ -944,4 +944,54 @@ footer p {
     .we-done-content p {
         font-size: 1em;
     }
+}
+
+@keyframes panRight {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.container2 .service,
+.container3 .service,
+.we-done-column {
+    opacity: 0; /* Initial state */
+    transform: translateX(-100%); /* Initial state */
+    transition: transform 1s cubic-bezier(0.25, 0.1, 0.25, 1), opacity 1s cubic-bezier(0.25, 0.1, 0.25, 1);
+    will-change: transform, opacity; /* Hint to the browser */
+}
+
+.container2.animate .service,
+.container3.animate .service,
+.we-done-column.animate {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.container2.animate .service:nth-child(1),
+.container3.animate .service:nth-child(1),
+.we-done-column:nth-child(1).animate {
+    transition-delay: 0s;
+}
+
+.container2.animate .service:nth-child(2),
+.container3.animate .service:nth-child(2),
+.we-done-column:nth-child(2).animate {
+    transition-delay: 0.2s;
+}
+
+.container2.animate .service:nth-child(3),
+.container3.animate .service:nth-child(3),
+.we-done-column:nth-child(3).animate {
+    transition-delay: 0.4s;
+}
+
+.container2.animate .service:nth-child(4),
+.container3.animate .service:nth-child(4) {
+    transition-delay: 0.6s;
 }
