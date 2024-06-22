@@ -71,8 +71,7 @@ nav ul li a:hover {
 }
 
 section {
-    padding: 20px;
-    margin-top: 60px;
+    padding: 50px;
 }
 
 section h1 {
@@ -180,29 +179,33 @@ section h1 {
 
 /* style for about section */
 #about{
+    background: url('images/project/project_section_bg.png') no-repeat center center; 
     padding: 5px 0;
-    font-family: 'montserrat';
-    background: url('images/about/about.png') no-repeat center center; 
-    text-align: center;
-    height:max-content;
-
+    max-width: 100%;
 }
 
-.about-section h1 {
-    font-size: 36px;
-    margin-bottom: 20px;
-    color: #002F6C;  
-    text-align: left;
-}
-.about-section p {
-    font-size:18px;
-    line-height: 1.6;
-    max-width: 1000px;
+.who-we-are {
+    max-width: 80%;
     margin: 0 auto;
-    color: #333;
+    padding: 20px;
+    font-family: 'montserrat';
 }
+
+#about h2 {
+    font-size: 2em;
+    color: #0E3262;
+    margin-bottom: 20px;
+}
+
+#about p {
+    font-size: 1.125em;
+    color: #0E3262;
+    line-height: 2.5;
+    text-align: center;
+}
+
 .we-believe {
-    background-color: #002F6C; 
+    background-color: #0E3262; 
     color: white;
     padding: 20px;
     text-align: center;
@@ -225,7 +228,7 @@ section h1 {
     overflow: hidden;
     
     text-align: center;
-    color: #002F6C; 
+    color: #0E3262; 
 }
 .image-item img {
     width: 100%;
@@ -233,45 +236,84 @@ section h1 {
     display: block;
 }
 .image-item figcaption {
-    padding: 10px;
+    padding: 30px;
     font-size: 1em;
     font-family: 'montserrat';
     color: white;
     text-align: center;
     font-size: 24px;
     font-weight: bold;
-
 }
 
-
-/* Responsive adjustments for about and we-believe*/
-
-@media (max-width: 768px) {
-    .intro-section h1 {
-        font-size: 2em;
-    }
-    .intro-section p {
-        font-size: 1em;
-    }
-}
+/* Media Queries for Responsiveness */
 @media (max-width: 1200px) {
     .image-item {
-        flex: 1 1 calc(33.333% - 40px); 
+        flex: 1 1 calc(33.33% - 40px); 
     }
 }
-@media (max-width: 768px) {
+
+@media (max-width: 992px) {
     .image-item {
         flex: 1 1 calc(50% - 40px); 
     }
 }
-@media (max-width: 480px) {
+
+@media (max-width: 768px) {
+    .who-we-are {
+        max-width: 90%;
+    }
+
+    #about h2 {
+        font-size: 1.8em;
+    }
+
+    #about p {
+        font-size: 1.1em;
+    }
+
+    .we-believe {
+        padding: 15px;
+    }
+
     .image-item {
-        flex: 1 1 100%; 
+        flex: 1 1 calc(50% - 20px); 
+        margin: 5px;
+    }
+
+    .image-item figcaption {
+        font-size: 20px;
+        padding: 20px;
     }
 }
 
+@media (max-width: 576px) {
+    .who-we-are {
+        max-width: 100%;
+        padding: 0 10px;
+    }
 
+    #about h2 {
+        font-size: 1.5em;
+    }
 
+    #about p {
+        font-size: 1em;
+    }
+
+    .we-believe h2 {
+        font-size: 1.5em;
+    }
+
+    .image-item {
+        flex: 1 1 100%; 
+        margin: 5px;
+    }
+
+    .image-item figcaption {
+        font-size: 18px;
+        padding: 15px;
+    }
+}
 
 /* style for services section */
 #services {
@@ -286,6 +328,7 @@ section h1 {
     max-width: 100%;
     margin: 0 auto;
     text-align: center;
+    padding: 20px;
 }
 
 .container3 {
@@ -388,7 +431,7 @@ section h1 {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;  /* Ensures the image covers the section */
-    padding: 50px;
+    padding: 60px;
     text-align: left;
     font-family: 'montserrat';
 }
@@ -497,10 +540,11 @@ section h1 {
     margin-bottom: 0px; 
     margin-left: 40px;
     font-weight: bolder;
+    padding: 20px;
 }
 
 .product-upper {
-    height: 100vh; /* Adjust the height as needed */
+    height: 80vh; /* Adjust the height as needed */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -560,7 +604,6 @@ section h1 {
     text-decoration: none;
     display: inline-block;
     cursor: pointer;
-    transition: background 0.3s ease;
 }
 
 .gradient-button:hover {
@@ -764,30 +807,31 @@ section h1 {
 #our-team {
     background-color: #ffffff;
     padding: 5px 0;
-    margin-top: -10px;
 }
 
 .team-header {
     background-color: #0E3262;
     color: white;
-    padding: 5px 0;
+    height: 18vh;
 }
 
 .team-header h1 {
     font-size: 2.25em;
     font-weight: bold;
     font-family: 'Montserrat';
+    margin-top: -10px;
 }
 
 #our-team h1 {
     font-size: 2.25em;
     font-family: 'Montserrat';
-    margin-top: 50px;
-    margin-bottom: 20px;
+    padding: 30px;
+    margin-bottom: 10px;
     margin-left: 45px;
 }
 
 .team-container {
+    padding: 20px;
     font-family: 'Poppins';
     display: grid;
     grid-template-columns: repeat(3, 1fr);
