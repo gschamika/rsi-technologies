@@ -17,3 +17,10 @@ document.addEventListener("DOMContentLoaded", function() {
     const targets = document.querySelectorAll('.container2, .container3, .we-done-column');
     targets.forEach(target => observer.observe(target));
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('menu-toggle').addEventListener('click', function() {
+        var navMenu = document.getElementById('nav-menu');
+        navMenu.classList.toggle('show');
+    });
+});

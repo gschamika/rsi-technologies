@@ -1,77 +1,124 @@
 /* styles.css */
 
-
-html {
+html, body {
     scroll-behavior: smooth;
-}
-
-body {
+    width: 100%;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
+/* Base styling for navigation bar */
 nav {
-    background-color: #ffffff;
-    overflow: hidden;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-}
-
-nav {
-    display: flex;
-    align-items: center;
     background-color: #f8f9fa; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 10px 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    font-family: Arial, sans-serif;
+    position: fixed; 
+    width: 100%; 
+    top: 0; 
+    z-index: 1000; 
+    box-sizing: border-box; 
 }
 
 .logo-container {
-    flex: 0 0 auto; 
-    margin-right: 20px; 
+    display: flex;
+    align-items: center;
 }
 
-.nav-logo {
+.logo-container img{
     width: 100px; 
     height: auto;
 }
 
-nav ul {
-    list-style-type: none;
+.nav-logo {
+    height: 50px; 
+}
+
+ul {
+    list-style: none;
+    display: flex;
     margin: 0;
     padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    flex: 1; 
-    justify-content: flex-end; 
+    box-sizing: border-box; 
 }
 
-nav ul li {
-    margin-left: 20px; 
-    margin-right: 20px;
+ul li {
+    margin: 0 15px;
 }
 
-nav ul li a {
+ul li a {
     display: block;
     color: #000;
     text-align: center;
-    padding: 10px 15px;
+    padding: 10px 10px;
     text-decoration: none;
     font-family: 'Montserrat', sans-serif; 
     font-weight: bold; 
     transition: background-color 0.3s, color 0.3s;
 }
 
-nav ul li a:hover {
+ul li a:hover {
     background-color: #0E3262;
     color: #fff; 
-    border-radius: 5px; 
+    border-radius: 5px;  
+}
+
+/* Responsive design for mobile */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 20px; 
+    }
+    
+    ul {
+        flex-direction: column;
+        width: 100%;
+        display: none; 
+    }
+
+    ul.show {
+        display: flex;
+    }
+
+    ul li {
+        width: 100%;
+        text-align: center;
+        margin: 10px 0;
+    }
+}
+
+/* Toggle button for mobile menu */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    background-color: rgb(0, 0, 0);
+    height: 3px;
+    width: 25px;
+    margin: 4px;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+        position: absolute;
+        right: 20px; 
+        top: 20px;
+    }
 }
 
 section {
     padding: 50px;
+    margin-top: -5px;
 }
 
 section h1 {
@@ -143,7 +190,7 @@ section h1 {
 
 @media (max-width: 768px) {
     .logo1 {
-        width: 400px;
+        width: 250px;
     }
     
     .content1 h1 {
@@ -162,7 +209,7 @@ section h1 {
 
 @media (max-width: 480px) {
     .content1 h1 {
-        margin-top: 150px;
+        margin-top: 70px;
         font-size: 2.5em;
     }
 
@@ -179,16 +226,27 @@ section h1 {
 
 /* style for about section */
 #about{
-    background: url('images/project/project_section_bg.png') no-repeat center center; 
+    
     padding: 5px 0;
     max-width: 100%;
 }
 
 .who-we-are {
-    max-width: 80%;
+    background: url('images/project/project_section_bg.png') no-repeat center center; 
+    max-width: 100%;
+    font-family: 'montserrat';
+}
+
+.who-we-are h2{
+    max-width: 90%;
     margin: 0 auto;
     padding: 20px;
-    font-family: 'montserrat';
+}
+
+.who-we-are p{
+    max-width: 80%;
+    margin: 0 auto;
+    padding-bottom: 40px;
 }
 
 #about h2 {
@@ -427,10 +485,10 @@ section h1 {
 
 .project-section{
     background: url('images/project/project_section_bg.png') no-repeat center center; 
-    background-size: 100vw 100vh; /* Ensure the background image covers the entire screen */
+    background-size: 100vw 100vh; 
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;  /* Ensures the image covers the section */
+    background-size: cover;  
     padding: 60px;
     text-align: left;
     font-family: 'montserrat';
@@ -473,25 +531,25 @@ section h1 {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('images/project/weDone.png'); /* Replace with your image URL */
+    background-image: url('images/project/weDone.png'); 
     background-size: cover;
     background-position: center;
-    opacity: 0.8; /* Adjust opacity as needed */
+    opacity: 0.8; 
     z-index: 1;
 }
 
 .we-done h1{
     padding: 40px 20px;
     text-align: left;
-    color: #ffffff;       /* Headding colour*/
+    color: #ffffff;       
     font-family: 'montserrat';
     font-size: 2.25em;
 }
 
 .we-done-container {
     display: flex;
-    justify-content: center; /* Center the columns */
-    gap: 10px; /* Reduced gap to bring columns closer */
+    justify-content: center; 
+    gap: 10px; 
     width: 100%;
 }
 
@@ -544,7 +602,7 @@ section h1 {
 }
 
 .product-upper {
-    height: 80vh; /* Adjust the height as needed */
+    height: 80vh; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -552,17 +610,17 @@ section h1 {
 }
 
 .product-upper img {
-    width: 50%; /* Adjust the width as needed */
-    height: auto; /* Maintain aspect ratio */
-    margin-top: 0px; /* Remove any margin above the image */
+    width: 50%; 
+    height: auto; 
+    margin-top: 0px; 
 }
 
 .gradient-line {
-    width: 100%; /* Adjust the width as needed */
-    height: 10%; /* Adjust the height as needed */
+    width: 100%; 
+    height: 10%; 
     background: linear-gradient(90deg, #1E75BA, #F25B2A);
     position: relative;
-    margin: 20px auto; /* Center the line horizontally */
+    margin: 20px auto; 
     border-radius: 10px;
 }
 .gradient-line span {
@@ -570,10 +628,10 @@ section h1 {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: white; /* Adjust text color as needed */
-    font-family: 'Montserrat', sans-serif; /* Adjust font as needed */
-    font-size: 35px; /* Adjust font size as needed */
-    white-space: nowrap; /* Ensure text doesn't wrap */
+    color: white; 
+    font-family: 'Montserrat', sans-serif; 
+    font-size: 35px; 
+    white-space: nowrap; 
 }
 .full-height-table {
     width: 100%;
@@ -586,11 +644,11 @@ section h1 {
     text-align: center;
 }
 .left-side {
-    width: 30%; /* 30% width for the left side */ 
+    width: 30%; 
 }
 
 .right-side {
-    width: 70%; /* 70% width for the right side */
+    width: 70%; 
 }
 
 .gradient-button {
@@ -611,15 +669,15 @@ section h1 {
 }
 
 .greenlogo {
-    width: 100%; /* Adjust the width as needed */
-    height: 1000px; /* Maintain aspect ratio */
+    width: 100%; 
+    height: 1000px; 
 }
 
 
 .product-lower {
     display: flex;
     width: 100%;
-    height: 100vh; /* Adjust height as needed */
+    height: 100vh; 
     background-image: url('images/products/productsbg.png');
     background-size: cover;
     background-position: center;
@@ -726,11 +784,11 @@ section h1 {
 
 @media screen and (max-width: 768px) {
     .product-upper img {
-        width: 70%; /* Reduce image size */
+        width: 70%; 
     }
 
     .gradient-line span {
-        font-size: 20px; /* Adjust font size */
+        font-size: 20px; 
     }
 
     .full-height-table {
@@ -757,12 +815,12 @@ section h1 {
     }
 
     .shape {
-        width: 100%; /* Full width on small screens */
-        padding: 5px; /* Reduce padding */
+        width: 100%; 
+        padding: 5px; 
     }
 
     .shape img {
-        width: 50px; /* Smaller icon size */
+        width: 50px; 
     }
 
     .buttons-container {
@@ -1010,7 +1068,7 @@ footer p {
     }
 
     .we-done-column {
-        flex: 1 1 calc(50% - 20px); /* Two columns on medium screens */
+        flex: 1 1 calc(50% - 20px);
     }
 
     .we-done-content h1 {
@@ -1034,7 +1092,7 @@ footer p {
     }
 
     .we-done-column {
-        flex: 1 1 100%; /* Single column on small screens */
+        flex: 1 1 100%; 
         padding: 10px 0;
     }
 
@@ -1095,10 +1153,10 @@ footer p {
 .container2 .service,
 .container3 .service,
 .we-done-column {
-    opacity: 0; /* Initial state */
-    transform: translateX(-100%); /* Initial state */
+    opacity: 0; 
+    transform: translateX(-100%); 
     transition: transform 1s cubic-bezier(0.25, 0.1, 0.25, 1), opacity 1s cubic-bezier(0.25, 0.1, 0.25, 1);
-    will-change: transform, opacity; /* Hint to the browser */
+    will-change: transform, opacity; 
 }
 
 .container2.animate .service,
