@@ -318,7 +318,7 @@ section h1 {
 
 @media (max-width: 768px) {
     .who-we-are {
-        max-width: 90%;
+        max-width: 100%;
     }
 
     #about h2 {
