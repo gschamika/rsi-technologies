@@ -521,8 +521,7 @@ section h1 {
     margin-bottom: 40px;
 }
 
-.we-done
-{
+.we-done {
     position: relative;
     background-color: #0E3262;
     height: 100vh;
@@ -530,8 +529,9 @@ section h1 {
     color: white;
     margin: 0;
     padding: 50px;
-    justify-content: center
-
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .we-done::before {
@@ -544,54 +544,80 @@ section h1 {
     background-image: url('images/project/weDone.png'); 
     background-size: cover;
     background-position: center;
-    opacity: 0.8; 
+    opacity: 0.8;
     z-index: 1;
 }
 
-.we-done h1{
+.we-done h1 {
     padding: 40px 20px;
     text-align: left;
-    color: #ffffff;       
-    font-family: 'montserrat';
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
     font-size: 2.25em;
+    z-index: 2;
 }
 
 .we-done-container {
     display: flex;
-    justify-content: center; 
-    gap: 10px; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
     width: 100%;
+    z-index: 2;
 }
 
 .we-done-column {
     padding: 10px;
-    flex: 1 1 calc(33.333% - 10px);
+    flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
+    z-index: 2;
 }
 
 .we-done-column img {
-    width: 150px;
-    height: 160px;
-    margin-bottom: 0; 
+    width: 100px;
+    height: 100px;
+    margin-bottom: 0;
 }
 
 .we-done-content {
     text-align: center;
-    padding: 10px; 
+    padding: 10px;
+    z-index: 2;
 }
 
 .we-done-content h1 {
-    font-family: 'Montserrat';
-    font-size: 4.2em; 
-    margin-bottom: 0%; 
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2em;
+    margin-bottom: 0;
+    
 }
 
 .we-done-content p {
-    font-family: 'Montserrat';
-    font-size: 1.375em; 
-    margin-bottom: 0%; 
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1em;
+    margin-bottom: 0;
+}
+
+@media (min-width: 600px) {
+    .we-done-container {
+        flex-direction: row;
+    }
+
+    .we-done-column img {
+        width: 150px;
+        height: 160px;
+    }
+
+    .we-done-content h1 {
+        font-size: 4.2em;
+    }
+
+    .we-done-content p {
+        font-size: 1.375em;
+    }
 }
 
 /* style for products section */
@@ -698,14 +724,14 @@ section h1 {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 20px;
+    padding: 0px;
     color: white;
 }
 
 .left-column img {
     margin-top: 0px;
     margin-left: 0px;
-    width: 100%;
+    width: 90%;
     margin-bottom: 20px;
 }
 
@@ -824,8 +850,8 @@ section h1 {
     }
 
     .shape {
-        width: 100%; 
-        padding: 5px; 
+        width: 90%; 
+        padding: 10px; 
     }
 
     .shape img {
