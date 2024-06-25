@@ -190,15 +190,15 @@ section h1 {
 
 @media (max-width: 768px) {
     .logo1 {
-        width: 250px;
+        width: 100%;
     }
     
     .content1 h1 {
-        font-size: 3em;
+        font-size: 2em;
     }
 
     .learn-more {
-        padding: 8px 16px;
+        padding: 10px 20px;
         font-size: 0.9em;
     }
 
@@ -208,13 +208,18 @@ section h1 {
 }
 
 @media (max-width: 480px) {
+
+    .logo1 {
+        width: 100%;
+    }
+
     .content1 h1 {
         margin-top: 70px;
-        font-size: 2.5em;
+        font-size: 2em;
     }
 
     .learn-more {
-        padding: 6px 12px;
+        padding: 10px 20px;
         font-size: 0.8em;
     }
 
@@ -235,6 +240,7 @@ section h1 {
     background: url('images/project/project_section_bg.png') no-repeat center center; 
     max-width: 100%;
     font-family: 'montserrat';
+    color: #0E3262;
 }
 
 .who-we-are h2{
@@ -250,9 +256,13 @@ section h1 {
 }
 
 #about h2 {
-    font-size: 2em;
-    color: #0E3262;
+    font-size: 36px;
     margin-bottom: 20px;
+    font-family: 'montserrat';
+}
+
+.we-believe h2{
+    color: #ffffff;
 }
 
 #about p {
@@ -271,7 +281,7 @@ section h1 {
 .we-believe h2 {
     margin-bottom: 20px;
     text-align:left;
-    font-family: 'montserrat';
+    font-family: 'montserrat'; 
 }
 .image-row {
     display: flex;
@@ -587,18 +597,17 @@ section h1 {
 /* style for products section */
 #products {
     background-color: #ffffff;  
-    padding: 5px 0;
+    padding: 0px 0;
 }
 
 #products h1 {
     text-align: left;
     font-size: 2.25em;
     font-family: 'Montserrat', sans-serif;
-    color: #545454;
-    margin-bottom: 0px; 
-    margin-left: 40px;
+    color: #ffffff;
+    background-color: #0E3262;
     font-weight: bolder;
-    padding: 20px;
+    padding: 40px;
 }
 
 .product-upper {
