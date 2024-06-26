@@ -863,7 +863,7 @@ section h1 {
 
 /* style for our-team section */
 #our-team {
-    background-color: #ffffff;
+    background-color: #d4cccc;
     padding: 5px 0;
 }
 
@@ -899,7 +899,7 @@ section h1 {
 
 .team-member {
     display: flex;
-    background-color: #fff;
+    background-color: #d4cccc;
     overflow: hidden;
     width: 100%;
     max-width: 400px;
@@ -931,6 +931,37 @@ section h1 {
     font-style: italic;
     color: #0E3262;
     margin: 0;
+}
+
+/* style for company logos */
+
+.Company_logo-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    background-color: #ffffff;
+    
+}
+.Company_logo {
+    max-width: 100px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.Company_logo:hover {
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    .logo-container {
+        flex-direction: column;
+    }
+
+    .logo {
+        margin: 10px 0;
+    }
 }
 
 /* style for contact-us section */
