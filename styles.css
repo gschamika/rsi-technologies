@@ -900,7 +900,7 @@ section h1 {
 
 /* style for our-team section */
 #our-team {
-    background-color: #d4cccc;
+    background-color: #EFEFEF;
     padding: 5px 0;
 }
 
@@ -936,7 +936,7 @@ section h1 {
 
 .team-member {
     display: flex;
-    background-color: #d4cccc;
+    background-color: #EFEFEF;
     overflow: hidden;
     width: 100%;
     max-width: 400px;
@@ -976,13 +976,12 @@ section h1 {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin-top: 40px;
-    padding-top: 20px;
+    padding: 70px;
     background-color: #ffffff;
     
 }
 .Company_logo {
-    max-width: 100px;
+    max-width: 300px;
     height: auto;
     transition: transform 0.3s ease;
 }
