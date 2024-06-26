@@ -955,11 +955,11 @@ section h1 {
 }
 
 @media (max-width: 768px) {
-    .logo-container {
+    .Company_logo-container {
         flex-direction: column;
     }
 
-    .logo {
+    .Company_logo {
         margin: 10px 0;
     }
 }
